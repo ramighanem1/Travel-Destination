@@ -1,12 +1,14 @@
 import Header from "../header/Header";
 import Tours from "../tours/Tours"
 import Footer from "../footer/Footer"
+import './Home.css'
 
-function Home() {
+function Home(props) {
+  let data = props.tours;
   return (
     <>
       <Header />
-      <Tours />
+      <Tours tours={data}/>
       <Footer />
     </>
   );

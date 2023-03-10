@@ -1,17 +1,20 @@
-import data from "../../data/db.json"
+import Tour from "./tour/Tour"
+
+import "./Tours.css"
 
 
-function Tours() {
+function Tours(props) {
+    let data = props.tours;
+
     return (
         <>
-            {data.map((item) => {
-                return (
-                    <div key={item.id}>
-                        <h1>{item.name}</h1>
-                        <img src={item.image} alt={item.name}></img>
-                    </div>
-                )
-            })}
+            <div className="tours-container">
+                {data.map((item) => {
+                    return (
+                        <Tour key={item.id.toString()} tour={item} />
+                    )
+                })}
+            </div>
         </>
     );
 }

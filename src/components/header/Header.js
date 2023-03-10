@@ -1,17 +1,20 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 import './Header.css';
+
 
 function Header() {
     return (
         <>
-            <header className="header">
-                {/* <img src="./Data/Logo.jpg" alt="Logo"> */}
-                <h1>Hello From Header</h1>
-                {/* <nav>
-                        <a href="./">Home</a>
-                        <a href="./accounting.html">Accounting</a>
-                    </nav> */}
-            </header>
+            <Navbar className="bg-light" fixed="top">
+                <Container>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
         </>
     );
 }
